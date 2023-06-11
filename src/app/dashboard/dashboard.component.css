@@ -1,0 +1,61 @@
+.container {
+    height: 100vh;
+}
+
+.content {
+    width: 300px;
+    background: beige;
+    border: 2px solid;
+    border-radius: 6px;
+    border: none;
+    padding: 30px;
+    gap: 10px;
+    box-shadow: 1px 2px 17px; 
+}
+
+input {
+    padding: 5px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.range {
+    cursor: pointer;
+}
+
+button {
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(95, 95, 250);
+    color: aliceblue;
+}
+
+button:hover {
+    
+    background: blue;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid;
+    padding: 10px;
+}
+
+th {
+    background: beige;
+}
+
+img {
+    width: 150px;
+    cursor: pointer;
+}

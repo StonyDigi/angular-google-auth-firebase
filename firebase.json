@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "tripadvisor",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

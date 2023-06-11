@@ -1,0 +1,21 @@
+{
+  "targets": {
+    "tripadvisor-d6a80": {
+      "hosting": {
+        "tripadvisor": [
+          "tripadvisor-d6a80"
+        ]
+      }
+    },
+    "trip-2ddfd": {
+      "hosting": {
+        "tripadvisor": [
+          "trip-2ddfd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "trip-2ddfd"
+  }
+}

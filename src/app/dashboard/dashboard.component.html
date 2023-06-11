@@ -1,0 +1,43 @@
+<div class="container">
+    <h1 *ngIf="!loggedIn">Kedves Barátaim!</h1>
+    <p>Örömmel szeretnélek meghívni egy kerti parti keretein belül, amelyet nálam rendezek. Szeretném veled és más közeli barátainkkal együtt ünnepelni a nyár érkezését</p>
+    <h2>Jelentkezz be a kérdőív kitöltéséhez</h2>
+    <img *ngIf="!loggedIn" (click)="login()" src="https://onymos.com/wp-content/uploads/2020/10/google-signin-button.png" alt="...">
+    <div class="content" *ngIf="loggedIn">
+    <h1>Add your trip</h1>
+    <button *ngIf="loggedIn" (click)="logout()">Logout from Google</button>
+    
+    <label >From</label>
+    <input type="text" [(ngModel)]="actual.from"/>
+    <label >To</label>
+    <input type="text" [(ngModel)]="actual.to"/>
+    <label >Email</label>
+    <input id="creatoremail" type="email" [(ngModel)]="actual.creatorEmail" [disabled]="loggedIn"/>
+    <label >Name</label>
+    <input id="creatorname" type="text" [(ngModel)]="actual.creatorName" [disabled]="loggedIn"/>
+    <label >Level</label>
+    <input class="range" type="range" min="1"  max="5" [(ngModel)]="actual.level"/>
+    <label >Distance</label>
+    <input type="number" min="1" max="100" [(ngModel)]="actual.distance"/>
+    <button (click)="create()" type="button">Send</button>
+    </div>
+</div>
+
+<table>
+    <tr>
+        <th>From</th>
+        <th>To</th>
+        <th>Creator Email</th>
+        <th>Creator Name</th>
+        <th>Level</th>
+        <th>Distnce</th>
+    </tr>
+        <tr *ngFor="let x of service.trips">
+            <td>{{x.from}}</td>
+            <td>{{x.to}}</td>
+            <td>{{x.creatorEmail}}</td>
+            <td>{{x.creatorName}}</td>
+            <td>{{x.level}}</td>
+            <td>{{x.distance}}</td>
+        </tr>
+</table>
